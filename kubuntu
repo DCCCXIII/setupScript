@@ -1,0 +1,42 @@
+#!/bin/bash
+
+export EMAIL=changeme
+
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+sudo snap install go --classic
+
+# install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+sudo apt install build-essential
+
+sudo snap install vivaldi --classic
+
+sudo snap install nvim --classic
+
+sudo apt install fzf
+
+sudo apt install bat
+
+#sudo apt install curl
+
+cargo install zoxide --locked
+
+cargo install starship --locked
+
+#install ghostty:
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
+
+ssh-keygen -t ed25519 -C $EMAIL
+ssh-add ~/.ssh/id_ed25519
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# set fn key
+echo options hid_apple fnmode=0 | sudo tee -a /etc/modprobe.d/hid_apple.conf
+# sudo update-initramfs -u -k all
+
+sudo snap install obsidian --classic
