@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export EMAIL=changeme
+export USERNAME=changeme
 
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -42,3 +43,5 @@ echo options hid_apple fnmode=0 | sudo tee -a /etc/modprobe.d/hid_apple.conf
 sudo snap install obsidian --classic
 
 sudo snap install discord
+
+sudo usermod -a -G video $USERNAME
