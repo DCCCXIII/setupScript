@@ -45,3 +45,9 @@ sudo snap install obsidian --classic
 sudo snap install discord
 
 sudo usermod -a -G video $USERNAME
+
+
+# to connect bose headphones
+# sudo nvim /etc/bluetooth/main.conf
+# change #ControllerMode = dual to ControllerMode = bredr
+# sudo service bluetooth restart
